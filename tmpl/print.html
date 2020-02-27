@@ -1,0 +1,12 @@
+
+      <div class="schedule-cols" data-start-from="200">
+{{range. }}
+         <div class="schedule-day">
+            <div class="schedule-timeline">
+            </div>
+            <div class="schedule-events">
+               <div class="schedule-events-caption"><span>{{.DayNameShort}}</span><b>{{.DayNum}}</b></div>{{range .Events}}
+               <div class="schedule-events-entry" data-start="{{.MinsStart}}" data-end="{{.MinsEnd}}" data-bg-color="{{.BackgroundColor}}"><b>{{.Caption}}</b><span>{{.TimeStart}}-{{.TimeEnd}}</span></div>{{end}}
+            </div>
+         </div>{{end}}
+      </div>

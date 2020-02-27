@@ -1,0 +1,29 @@
+<div class="schedule-container">
+   <div class="schedule-caption">
+      <a href="/schedule-print" target="_blank"><h2>Расписание</h2></a>
+   </div>
+   <div class="schedule-data">
+      <div class="schedule-dayselect">
+         <div data-day="mon" class="dayselect-mon"><span>ПН</span></div>
+         <div data-day="tue" class="dayselect-tue"><span>ВТ</span></div>
+         <div data-day="wed" class="dayselect-wed"><span>СР</span></div>
+         <div data-day="thu" class="dayselect-thu"><span>ЧТ</span></div>
+         <div data-day="fri" class="dayselect-fri"><span>ПТ</span></div>
+         <div data-day="sat" class="dayselect-sat"><span>СБ</span></div>
+         <div data-day="sun" class="dayselect-sun"><span>ВС</span></div>
+      </div>
+      <div class="schedule-content">
+         <div class="schedule-content-scroller">
+
+{{range .}}<div class="schedule-day-events schedule-day-{{.ClassSuffix}}">
+         <p>{{.Caption}}</p>{{range .Events}}
+         <div class="schedule-event"><span>{{.TimeStart}}</span><b>{{.Caption}}</b></div>{{end}}
+      </div>{{end}}
+
+         </div> <!-- scroller -->
+      </div>
+   </div>
+   <div class="schedule-controller">
+      <a href="/schedule-print" target="_blank" class="custom-button custom-button--orange">Неделя полностью</a>
+   </div>
+</div>

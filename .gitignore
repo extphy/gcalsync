@@ -1,0 +1,6 @@
+tmp
+output
+*.swp
+config.json
+credentials.json
+token.json
